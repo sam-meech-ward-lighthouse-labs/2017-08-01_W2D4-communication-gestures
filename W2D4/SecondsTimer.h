@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol SecondsTimerDelegate;
+
 @interface SecondsTimer : NSObject
 
 /// The number of seconds that have passed since the timer started.
@@ -15,4 +17,13 @@
 
 - (void)startTimer;
 
+@property (nonatomic, weak) id<SecondsTimerDelegate> delegate;
+
 @end
+
+@protocol SecondsTimerDelegate <NSObject>
+
+- (void)secondsTimer:(SecondsTimer *)timer didIncrementSeconds:(int)seconds;
+
+@end
+

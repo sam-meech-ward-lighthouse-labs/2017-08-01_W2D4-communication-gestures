@@ -14,7 +14,7 @@
     [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         self.seconds += 1;
         
-        NSLog(@"Seconds: %i", self.seconds);
+        [self.delegate secondsTimer:self didIncrementSeconds:self.seconds];
     }];
 }
 
