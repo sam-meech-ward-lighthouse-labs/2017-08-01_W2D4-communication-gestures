@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SecondsTimer.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(secondsUpdated:) name:@"com.meech-ward.seconds-updated" object:nil];
+    
     return YES;
+}
+
+- (void)secondsUpdated:(NSNotification *)notification {
+    SecondsTimer *timer = [notification object];
+    NSLog(@"SEconds Updated from app delegate: %i", timer.seconds);
 }
 
 

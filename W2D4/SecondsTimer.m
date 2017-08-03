@@ -14,7 +14,9 @@
     [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         self.seconds += 1;
         
-        NSLog(@"Seconds: %i", self.seconds);
+        // Tell something that seconds has been updated.
+        NSNotification *secondsUpdatedNotification = [NSNotification notificationWithName:@"com.meech-ward.seconds-updated" object:self];
+        [[NSNotificationCenter defaultCenter] postNotification:secondsUpdatedNotification];
     }];
 }
 

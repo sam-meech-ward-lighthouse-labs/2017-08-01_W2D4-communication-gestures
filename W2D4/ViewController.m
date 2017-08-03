@@ -10,6 +10,7 @@
 #import "SecondsTimer.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @property (nonatomic, strong) SecondsTimer *timer;
 
@@ -23,6 +24,14 @@
     
     self.timer = [[SecondsTimer alloc] init];
     [self.timer startTimer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(banana:) name:@"com.meech-ward.seconds-updated" object:nil];
+}
+
+- (void)banana:(NSNotification *)notification {
+    SecondsTimer *timer = [notification object];
+    NSLog(@"SEconds Updated %i", timer.seconds);
+    self.timerLabel.text = [NSString stringWithFormat:@"%i", timer.seconds];
 }
 
 

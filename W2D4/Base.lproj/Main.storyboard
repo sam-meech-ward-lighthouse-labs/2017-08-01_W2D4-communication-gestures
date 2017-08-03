@@ -33,6 +33,9 @@
                             <constraint firstItem="9iC-Hn-PmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a46-A6-2ai"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="9iC-Hn-PmS" id="SZa-6e-2Cv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
