@@ -15,6 +15,7 @@
 		22D116231F33799100CC9A8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D116221F33799100CC9A8D /* main.m */; };
 		22D1162D1F33799100CC9A8D /* W2D4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1162C1F33799100CC9A8D /* W2D4Tests.m */; };
 		22D116381F33799100CC9A8D /* W2D4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D116371F33799100CC9A8D /* W2D4UITests.m */; };
+		22D1164B1F337A3900CC9A8D /* SecondsTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1164A1F337A3900CC9A8D /* SecondsTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		22D116331F33799100CC9A8D /* W2D4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = W2D4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D116371F33799100CC9A8D /* W2D4UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = W2D4UITests.m; sourceTree = "<group>"; };
 		22D116391F33799100CC9A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D116491F337A3900CC9A8D /* SecondsTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondsTimer.h; sourceTree = "<group>"; };
+		22D1164A1F337A3900CC9A8D /* SecondsTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondsTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				22D116141F33799100CC9A8D /* AppDelegate.m */,
 				22D116161F33799100CC9A8D /* ViewController.h */,
 				22D116171F33799100CC9A8D /* ViewController.m */,
+				22D116491F337A3900CC9A8D /* SecondsTimer.h */,
+				22D1164A1F337A3900CC9A8D /* SecondsTimer.m */,
 				22D116191F33799100CC9A8D /* Main.storyboard */,
 				22D1161C1F33799100CC9A8D /* Assets.xcassets */,
 				22D1161E1F33799100CC9A8D /* LaunchScreen.storyboard */,
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D116181F33799100CC9A8D /* ViewController.m in Sources */,
+				22D1164B1F337A3900CC9A8D /* SecondsTimer.m in Sources */,
 				22D116231F33799100CC9A8D /* main.m in Sources */,
 				22D116151F33799100CC9A8D /* AppDelegate.m in Sources */,
 			);
