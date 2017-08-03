@@ -19,16 +19,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    self.timer = [[SecondsTimer alloc] init];
-    [self.timer startTimer];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)buttonAction:(id)sender {
+    
+    NSLog(@"touched");
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    NSLog(@"slider value changed: %f", sender.value);
+}
+
+- (IBAction)viewTapped:(UITapGestureRecognizer *)sender {
+    
+    NSLog(@"background tapped %@", NSStringFromCGPoint([sender locationOfTouch:0 inView:sender.view]));
+}
+
+- (IBAction)panning:(UIPanGestureRecognizer *)sender {
+    
+    CGPoint translation = [sender translationInView:sender.view.superview];
+    
+    NSLog(@"%@", NSStringFromCGPoint(translation));
+    
+    sender.view.center = CGPointMake(sender.view.center.x + translation.x, sender.view.center.y + translation.y);
+    
+    [sender setTranslation:CGPointMake(0, 0) inView:sender.view.superview];
 }
 
 
