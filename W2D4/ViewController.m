@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "SecondsTimer.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) SecondsTimer *timer;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.timer = [[SecondsTimer alloc] init];
+    [self.timer startTimer];
 }
 
 
