@@ -23,6 +23,15 @@
     
     self.timer = [[SecondsTimer alloc] init];
     [self.timer startTimer];
+    
+    [self.timer addObserver:self forKeyPath:@"seconds" options:0 context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"seconds"]) {
+        self.timerLabel.text = [NSString stringWithFormat:@"%i", ((SecondsTimer *) object).seconds];
+    }
 }
 
 
